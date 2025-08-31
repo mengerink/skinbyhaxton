@@ -1,0 +1,43 @@
+@import url("//fonts.googleapis.com/css?family=Abril+Fatface|Actor|Architects+Daughter|Arvo:400,400i,700,700i|Bevan|Cardo:400,400i,700|Dosis:400,700|Gravitas+One|Italiana|Josefin+Sans:400,400i,700,700i|Josefin+Slab:400,400i,700,700i|Lato:400,400i,700,700i|Lobster|Merriweather:400,400i,700,700i|Muli:400,400i,700,700i|Old+Standard+TT:400,400i,700|Open+Sans:400,400i,700,700i|Oswald:400,700|PT+Sans:400,400i,700,700i|Playfair+Display:400,400i,700,700i|Raleway:400,400i,700,700i|Roboto:400,400i,700,700i|Stalemate|Tangerine:400,700|Ubuntu:400,400i,700,700i|Vollkorn:400,400i,700,700i|Alegreya+Sans:400,400i,700,700i|Alegreya:400,400i,700,700i|Amatic+SC:400,700|Archivo+Narrow:400,400i,700,700i|Arizonia|Bangers|Berkshire+Swash|Carter+One|Cinzel:400,700|Dancing+Script:400,700|Eczar:400,700|Lora:400,400i,700,700i|Inknut+Antiqua:400,700|Libre+Baskerville:400,400i,700|Love+Ya+Like+A+Sister|Lusitana:400,700|Merriweather+Sans:400,400i,700,700i|Montserrat:400,400i,700,700i|Oleo+Script:400,700|Overlock+SC|Pacifico|Permanent+Marker|PT+Serif:400,400i,700,700i|Rubik:400,400i,700,700i|Russo+One|Shadows+Into+Light|UnifrakturCook:700|Vollkorn:400,400i,700,700i");
+
+/* Google font icon for the font family list, we just use css with different colors, its faster than an image */
+.google-font-icon {
+  font-weight: bold;
+}
+
+.google-font-icon .g1 {
+  color: '#156aeb';
+}
+
+.google-font-icon .o1 {
+  color: '#d4402a';
+}
+
+.google-font-icon .o2 {
+  color: '#ffb500';
+}
+
+.google-font-icon .g2 {
+  color: '#1a6fef';
+}
+
+.google-font-icon .l {
+  color: '#009553';
+}
+
+.google-font-icon .e {
+  color: '#d8432e';
+}
+
+/* For tiny font list: adds the google icon after a google font name */
+.mce-fontAbrilFatface::after, .mce-fontActor::after, .mce-fontArchitectsDaughter::after, .mce-fontArvo::after, .mce-fontBevan::after, .mce-fontCardo::after, .mce-fontDosis::after, .mce-fontGravitasOne::after, .mce-fontItaliana::after, .mce-fontJosefinSans::after, .mce-fontJosefinSlab::after, .mce-fontLato::after, .mce-fontLobster::after, .mce-fontMerriweather::after, .mce-fontMuli::after, .mce-fontOldStandardTT::after, .mce-fontOpenSans::after, .mce-fontOswald::after, .mce-fontPTSans::after, .mce-fontPlayfairDisplay::after, .mce-fontRaleway::after, .mce-fontRoboto::after, .mce-fontStalemate::after, .mce-fontTangerine::after, .mce-fontUbuntu::after, .mce-fontVollkorn::after, .mce-fontAlegreyaSans::after, .mce-fontAlegreya::after, .mce-fontAmaticSC::after, .mce-fontArchivoNarrow::after, .mce-fontArizonia::after, .mce-fontBangers::after, .mce-fontBerkshireSwash::after, .mce-fontCarterOne::after, .mce-fontCinzel::after, .mce-fontDancingScript::after, .mce-fontEczar::after, .mce-fontLora::after, .mce-fontInknutAntiqua::after, .mce-fontLibreBaskerville::after, .mce-fontLoveYaLikeASister::after, .mce-fontLusitana::after, .mce-fontMerriweatherSans::after, .mce-fontMontserrat::after, .mce-fontOleoScript::after, .mce-fontOverlockSC::after, .mce-fontPacifico::after, .mce-fontPermanentMarker::after, .mce-fontPTSerif::after, .mce-fontRubik::after, .mce-fontRussoOne::after, .mce-fontShadowsIntoLight::after, .mce-fontUnifrakturCook::after {
+  content: url('../images/googlefonts/Google_30x10.png');
+  width: 30px;
+  height: 12px;
+  padding-left: 5px;
+}
+
+/* Let the browser calculate the width for tiny List-menu boxes (like the Font Family one). It has to be important because it has an inline style. */
+div.mceMenu.mceListBoxMenu.mceNoIcons.defaultSkin {
+  width: auto !important;  
+}
