@@ -6,7 +6,7 @@ require 'fileutils'
 require 'uri'
 
 class SkinByHaxtonDownloader
-  DOMAIN = 'www.skinbyhaxton.com'
+  DOMAIN = 'skinbyhaxton.com'
   ARCHIVE_URL_BASE = 'https://web.archive.org'
   WAYBACK_API = 'https://archive.org/wayback/available'
   

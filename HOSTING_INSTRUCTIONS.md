@@ -18,15 +18,9 @@
 ```
 website/
 ├── index.html          # Main homepage
-├── about-us.html       # About page
-├── facials.html        # Treatments page  
-├── Blog.html          # Blog page
-├── reviews.html       # Press/reviews page
-├── image/             # All website images
-├── scripts/           # JavaScript files
+├── assets/            # Images, CSS, JS files
 ├── _config.yml        # GitHub Pages configuration
-├── .nojekyll         # Tells GitHub Pages to serve static files
-└── README.md         # Site documentation
+└── [other pages]      # Additional HTML pages
 ```
 
 ## Notes
