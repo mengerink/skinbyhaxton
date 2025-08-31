@@ -1,0 +1,30 @@
+SKIN BY HAXTON - GODADDY DEPLOYMENT PACKAGE
+==========================================
+
+Deployment Date: Sat Aug 30 20:57:53 PDT 2025
+Source: Internet Archive (snapshot from 2025-08-04)
+
+FILES TO UPLOAD:
+- All HTML files (index.html, about-us.html, etc.)
+- image/ directory with all images
+- scripts/ directory with JavaScript files  
+- .htaccess file for server configuration
+
+DEPLOYMENT STEPS:
+1. Log into your GoDaddy hosting control panel
+2. Navigate to File Manager (or use FTP client)
+3. Upload ALL files from this directory to public_html/
+4. Verify index.html loads correctly
+5. Test all navigation links
+
+CONTACT INFO ON SITE:
+Phone: 650-815-9976
+Address: 745 Distel Dr, Suite 201, Los Altos, CA 94022
+Hours: Tuesday - Saturday, 11:00 am to 7:00 pm
+
+Social Media Links:
+- Facebook: https://www.facebook.com/SkinByHaxton/
+- Twitter: https://twitter.com/ByHaxton  
+- Instagram: https://instagram.com/richard_haxton
+- Pinterest: https://www.pinterest.com/haxton10
+- LinkedIn: https://www.linkedin.com/in/skinbyhaxton/

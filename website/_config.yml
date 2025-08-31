@@ -1,0 +1,11 @@
+# GitHub Pages configuration for skinbyhaxton.com
+title: "Skin by Haxton"
+description: "Richard Haxton's Transformational Skin Solutions of Los Altos"
+baseurl: ""
+url: ""
+
+# Disable Jekyll processing for static HTML site
+plugins: []
+exclude: []
+
+# GitHub Pages will serve static files without Jekyll processing due to .nojekyll file
