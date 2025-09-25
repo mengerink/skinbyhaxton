@@ -271,20 +271,69 @@ h6{
 
 /* Article Images - Standardized sizing */
 #layout img[src*="skinbyhaxton.com/image/"] {
-	max-width: 600px;
-	width: 100%;
+	max-width: 400px;
+	width: auto;
+	max-height: 400px;
 	height: auto;
 	display: block;
 	margin: 0 auto;
 	border-radius: 8px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+	object-fit: contain;
 }
 
 /* Mobile responsive for article images */
 @media (max-width: 768px) {
 	#layout img[src*="skinbyhaxton.com/image/"] {
-		max-width: 90%;
+		max-width: 320px;
+		max-height: 320px;
 	}
+}
+
+/* Specific fixes for particularly large images */
+#layout img[src*="Skincare Winter Months.jpg"],
+#layout img[src*="Memory and Great Skin.jpg"],
+#layout img[src*="Glass of Water.jpg"],
+#layout img[src*="before-dude.jpeg"],
+#layout img[src*="shelter.jpg"],
+#layout img[src*="Egg Facial.png"],
+#layout img[src*="Secret to SHine like a Star on your Wedding.jpg"] {
+	max-width: 350px;
+	max-height: 350px;
+}
+
+/* Elegant separator styles */
+.article-separator {
+	text-align: center;
+	margin: 30px 0;
+	padding: 20px 0;
+}
+
+.article-separator::before {
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #dbbb69, transparent);
+	margin: 0 20px;
+	vertical-align: middle;
+}
+
+.article-separator .separator-symbol {
+	color: #dbbb69;
+	font-size: 20px;
+	margin: 0 10px;
+	vertical-align: middle;
+}
+
+.article-separator::after {
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #dbbb69, transparent);
+	margin: 0 20px;
+	vertical-align: middle;
 }
 </style>
 <style id="_template_custom_css" type="text/css">
@@ -357,93 +406,197 @@ document.getElementById('styleNav').style.visibility ='hidden';
       <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
           <td><div align="left"><p style="font-weight: normal; font-size: 15px; text-align: center;"><span style="font-size: 24pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;"></span></strong></span></p>
-<p style="font-weight: normal; font-size: 15px; text-align: center;"><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;">"THE BEST OF THE BAY AREA"</span></strong></span><br><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;">Number ONE Anti-Aging Specialist</span></strong></span><br><br><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;">AS FEATURED ON</span></strong></span></p>
+<p style="font-weight: normal; font-size: 15px; text-align: center;"><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;">"THE BEST OF THE BAY AREA"</span></strong></span><br><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;">Number ONE Anti-Aging Specialist</span></strong></span><br></p>
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><span style="font-size: 36pt;"><strong><span style="font-family: 'Times New Roman', Times, serif;"></span></strong></span></p>
-<p style="font-weight: normal; font-size: 15px; text-align: center;"><img title="" assetid="133219381" src="https://skinbyhaxton.com/image/side by side before and after asian woman.jpg" border="0" alt="" selectedfileurl="files/side by side before and after asian woman.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=F6324BC20B281AFEB2613DBBA4847797?id=133219381&amp;_dt=1576569944154"></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
+
+<p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/visible-results-sustainable-beauty-richard-haxtons-solutions-for-the-year-of-the-snake-californer-10302766" target="_self"><img title="" assetid="133219381" src="https://skinbyhaxton.com/image/side by side before and after asian woman.jpg" border="0" alt="" selectedfileurl="files/side by side before and after asian woman.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=F6324BC20B281AFEB2613DBBA4847797?id=133219381&amp;_dt=1576569944154"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/visible-results-sustainable-beauty-richard-haxtons-solutions-for-the-year-of-the-snake-californer-10302766" target="_self"><span style="font-size: 18pt;"><strong>Visible Results, Sustainable Beauty: Richard Haxton's Solutions for the Year of the Snake</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p><a href="https://entertainment.intheheadline.com/news/addressing-antiaging-solutions-for-americas-faces-of-all-colors/0487989" target="_self"><img title="" assetid="140629173" src="https://skinbyhaxton.com/image/kamila.jpg" border="0" alt="" selectedfileurl="files/kamila.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=375DF914A0745620FADF6719F9F837D9?id=140629173&amp;_dt=1727146405218"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://entertainment.intheheadline.com/news/addressing-antiaging-solutions-for-americas-faces-of-all-colors/0487989" target="_self"><span style="font-size: 18pt;"><strong>Addressing Anti-Aging Solutions for America's Faces of ALL Colors</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://intheheadline.com/news/richardhaxtons-facial-sculpting-named-best-beauty-treatment-2024/0483139" target="_self"><img title="" assetid="140476599" src="https://skinbyhaxton.com/image/Facial Sculpting.jpg" border="0" alt="" selectedfileurl="files/Facial Sculpting.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=375DF914A0745620FADF6719F9F837D9?id=140476599&amp;_dt=1727145798612"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://intheheadline.com/news/richardhaxtons-facial-sculpting-named-best-beauty-treatment-2024/0483139" target="_self"><span style="font-size: 18pt;"><strong>Richard Haxton's Facial Sculpting Named Best Beauty Treatment 2024</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://www.prlog.org/13016041-radiant-beauty-unveiling-the-secret-to-picture-perfect-wedding-memories.html" target="_self"><img title="" assetid="140120875" src="https://skinbyhaxton.com/image/perfect wedding.jpg" border="0" alt="" selectedfileurl="files/perfect wedding.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=66FBB5BA676C5519BC98FC4113F99A1A?id=140120875&amp;_dt=1713581235029"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://www.prlog.org/13016041-radiant-beauty-unveiling-the-secret-to-picture-perfect-wedding-memories.html" target="_blank"><span style="font-size: 18pt;"><strong>Radiant Beauty: Unveiling the Secret to Picture-Perfect Wedding Memories</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/oscars-glow-unveiled-richard-haxtons-non-surgical-rejuvenation-revolutionizes-beauty-standards-in-silicon-valley-californer-10273005" target="_self"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><span><span style="font-size: 14pt;"><img title="" assetid="140057498" src="https://skinbyhaxton.com/image/Oscars Glow 2024.jpg" border="0" alt="" selectedfileurl="files/Oscars Glow 2024.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=DF4C00E743E8DCC3D4D38C2160315415?id=140057498&amp;_dt=1710202765180"></span></span></span></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/oscars-glow-unveiled-richard-haxtons-non-surgical-rejuvenation-revolutionizes-beauty-standards-in-silicon-valley-californer-10273005" target="_self"><span style="font-size: 18pt;"><strong>Oscars' Glow Unveiled: Richard Haxton's Non-Surgical Rejuvenation Revolutionizes Beauty Standards in Silicon Valley</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/discover-revolutionary-anti-aging-solutions-for-men-in-los-altos-ca-californer-10270047" target="_self"><img title="" assetid="140000557" src="https://skinbyhaxton.com/image/Anti-Aging in Men.jpg" border="0" alt="" selectedfileurl="files/Anti-Aging in Men.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=DF4C00E743E8DCC3D4D38C2160315415?id=140000557&amp;_dt=1710203000604"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/discover-revolutionary-anti-aging-solutions-for-men-in-los-altos-ca-californer-10270047" target="_self"><span style="font-size: 18pt;"><strong>Discover Revolutionary Anti-Aging Solutions for Men in Los Altos, CA</strong></span></a></span></p>
 
-
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/accomplish-timeless-youth-for-2024-with-10-anti-aging-methods-from-richard-haxton-californer-10268313" target=""https://californer.com/dca/accomplish-timeless-youth-for-2024-with-10-anti-aging-methods-from-richard-haxton-californer-10268313"><img title="" assetid="140000560" src="https://skinbyhaxton.com/image/Quest for timeless youth.jpg" border="0" alt="" selectedfileurl="files/Quest for timeless youth.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=686C57A1A8E88C4674AB717006B2DE53?id=140000560&amp;_dt=1707949233925"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/accomplish-timeless-youth-for-2024-with-10-anti-aging-methods-from-richard-haxton-californer-10268313" target="_blank"><span style="font-size: 18pt;"><strong>Accomplish Timeless Youth For 2024 With 10 Anti-Aging Methods From Richard Haxton</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://kttc.marketminute.com/article/issuewire-2024-1-27-feng-shui-is-instrumental-for-anti-aging-in-the-year-of-dragon" target="_blank"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><img title="" assetid="139995478" src="https://skinbyhaxton.com/image/Feng Shui Year of the  Dragon 2024.jpg" border="0" alt="" selectedfileurl="files/Feng Shui Year of the  Dragon 2024.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=5FB4728498A5E132D2FD2501DD3E6326?id=139995478&amp;_dt=1707781481104"></span></a></p>
 
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://kttc.marketminute.com/article/issuewire-2024-1-27-feng-shui-is-instrumental-for-anti-aging-in-the-year-of-dragon" target="_self"><span style="font-size: 18pt;"><strong>Feng Shui is Instrumental for Anti-Aging in the Year of Dragon</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://przen.com/pr/the-best-of-the-bay-area-master-of-anti-aging-richard-haxton-has-changed-the-face-of-aging-przen-33318548" target="_blank"><img title="" assetid="139967224" src="https://skinbyhaxton.com/image/before-after.jpg" border="0" alt="" selectedfileurl="files/before-after.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=A950809C26A8E290ABAB45A8981FEFB7?id=139967224&amp;_dt=1706483414428"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://przen.com/pr/the-best-of-the-bay-area-master-of-anti-aging-richard-haxton-has-changed-the-face-of-aging-przen-33318548" target="_blank"><span style="font-size: 18pt;"><strong>The Best of the Bay Area: Master of Anti-Aging, Richard Haxton, Has Changed the Face of Aging</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://www.issuewire.com/why-men-feel-the-pressure-of-looking-young-to-keep-their-careers-1702785664040905" target="_blank"><img title="" assetid="133219345" src="https://skinbyhaxton.com/image/before-dude.jpeg" border="0" alt="" selectedfileurl="files/before-dude.jpeg" mce_src="/matrix/servlet/ShowAsset;jsessionid=F6324BC20B281AFEB2613DBBA4847797?id=133219345&amp;_dt=1576564219214"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://www.issuewire.com/why-men-feel-the-pressure-of-looking-young-to-keep-their-careers-1702785664040905" target="_self"><span style="font-size: 18pt;"><strong>Why Men Feel the Pressure of Looking Young to Keep Their Careers</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://hype.news/richard-haxtons-transformational-skin-solutions-of-los-altos/how-to-fight-premature-aging-during-covid-19-and-shelter-in-place-g0uorwkv" target="_self"><img title="" assetid="136062313" src="https://skinbyhaxton.com/image/shelter.jpg" border="0" alt="" selectedfileurl="files/shelter.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=49A3420D43D55218B91AC50C3FD07F0D?id=136062313&amp;_dt=1624863429875"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://hype.news/richard-haxtons-transformational-skin-solutions-of-los-altos/how-to-fight-premature-aging-during-covid-19-and-shelter-in-place-g0uorwkv" target="_self"><span style="font-size: 18pt;"><strong>How to Fight Premature Aging during COVID-19 and Shelter-in-Place</strong></span></a></span></p>
 
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/februarys-quick-tip-the-super-strawberry-californer-10066280" target="_self"><img title="" assetid="134153232" src="https://skinbyhaxton.com/image/super strawberry.jpg" border="0" alt="" selectedfileurl="files/super strawberry.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=2175B5531BBF6E70D89193378C38183E?id=134153232&amp;_dt=1587962176165"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/februarys-quick-tip-the-super-strawberry-californer-10066280" target="_self"><span style="font-size: 18pt;"><strong>February's Quick Tip: The Super Strawberry</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/why-the-demand-to-look-young-in-silicon-valley-is-becoming-more-crucial-than-hollywood-californer-10023036" target="_blank"><img title="" assetid="136020788" src="https://skinbyhaxton.com/image/Silicon Valley.png" border="0" alt="" selectedfileurl="files/136020788.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=CF7ED5CA02C7AB7F726B105032364CA1?id=136020788&amp;_dt=1623629012403"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/why-the-demand-to-look-young-in-silicon-valley-is-becoming-more-crucial-than-hollywood-californer-10023036" target="_blank"><span style="font-size: 18pt;"><strong>Why the demand to look young in Silicon Valley is becoming more crucial than Hollywood</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/give-yourself-hollywood-facelift-for-the-holidays-in-less-than-30-minutes-californer-10057735" target="_blank"><img title="" assetid="133261467" src="https://skinbyhaxton.com/image/Egg Facial.png" border="0" alt="" selectedfileurl="files/Egg Facial.png" mce_src="/matrix/servlet/ShowAsset;jsessionid=2FA94CD146F3BF12D2F812874B274BD5?id=133261467&amp;_dt=1577173695618"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/give-yourself-hollywood-facelift-for-the-holidays-in-less-than-30-minutes-californer-10057735" target="_blank"><span style="font-size: 18pt;"><strong>Give Yourself a Hollywood Facelift for the Holidays in Less Than 30 Minutes</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/the-secret-to-shine-like-star-on-your-wedding-day-californer-10030182" target="_blank"><img title="" assetid="133219348" src="https://skinbyhaxton.com/image/Secret to SHine like a Star on your Wedding.jpg" border="0" alt="" selectedfileurl="files/133219348.png" mce_src="/matrix/servlet/ShowAsset;jsessionid=F6324BC20B281AFEB2613DBBA4847797?id=133219348&amp;_dt=1576564300799"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/the-secret-to-shine-like-star-on-your-wedding-day-californer-10030182" target="_blank"><span style="font-size: 18pt;"><strong>The Secret to Shine Like A Star On Your Wedding Day</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><img width="576" title="" assetid="100320950" src="image/100320950_scaled_576x446.jpg" height="446" border="0" alt="" selectedfileurl="selectedfileurl"></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://menafn.com/1098478871/TIP-OF-THE-WEEK-The-Beauty-of-Fish-Oil" target="_blank"><img title="" assetid="133225119" src="https://skinbyhaxton.com/image/Fish Oil.jpg" border="0" alt="" selectedfileurl="files/Fish Oil.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=133768A461BEBE9FAF24A1886BD244DA?id=133225119&amp;_dt=1576617515245"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://menafn.com/1098478871/TIP-OF-THE-WEEK-The-Beauty-of-Fish-Oil" target="_blank"><span style="font-size: 18pt;"><strong>TIP OF THE WEEK: The Beauty of Fish Oil</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/bring-in-the-season-with-beautiful-skin-californer-10051778" target="_blank"><img title="" assetid="133249923" src="https://skinbyhaxton.com/image/Illuminate Beautiful Skin .jpg" border="0" alt="" selectedfileurl="files/super strawberry.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=A31ED65FD17B6890B43B9E1AB7ACEC46?id=133249923&amp;_dt=1576972570474"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/bring-in-the-season-with-beautiful-skin-californer-10051778" target="_blank"><span style="font-size: 18pt;"><strong>Bring in the Season with Beautiful Skin</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/tips-to-taking-care-of-your-skin-during-the-winter-season-californer-10054776" target="_blank"><img title="" assetid="133219399" src="https://skinbyhaxton.com/image/Skincare Winter Months.jpg" border="0" alt="" selectedfileurl="files/133219399.png" mce_src="/matrix/servlet/ShowAsset;jsessionid=38885FB79297DD379F87AE1D7F7CA401?id=133219399&amp;_dt=1576572190150"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/tips-to-taking-care-of-your-skin-during-the-winter-season-californer-10054776" target="_blank"><span style="font-size: 18pt;"><strong>Tips to Taking Care of Your Skin During the Winter Season</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://www.losaltosonline.com/special-sections2/sections/your-health/47525-" target="_blank"><img width="495" title="" style="display: block; margin-left: auto; margin-right: auto;" assetid="100321093" src="image/100321093.jpg" height="640" border="0" alt="" selectedfileurl="selectedfileurl"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://www.losaltosonline.com/special-sections2/sections/your-health/47525-" target="_blank"><span style="font-size: 18pt;"><strong>About face: Former model-turned-esthetician aims to make others look, feel younger</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/great-memory-and-beautiful-skin-what-do-they-have-in-common-californer-10031971" target="_blank"><img title="" assetid="133219488" src="https://skinbyhaxton.com/image/Memory and Great Skin.jpg" border="0" alt="" selectedfileurl="files/Memory and Great Skin.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=F6324BC20B281AFEB2613DBBA4847797?id=133219488&amp;_dt=1576576495832"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/great-memory-and-beautiful-skin-what-do-they-have-in-common-californer-10031971" target="_blank"><span style="font-size: 18pt;"><strong>Great Memory And Beautiful Skin — What Do They Have In Common?</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><strong></strong></span><a href="https://menafn.com/1098518381/Looking-Younger-May-Be-a-Glass-of-Water-Away" target="_blank"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><strong><img title="" assetid="133225065" src="https://skinbyhaxton.com/image/Glass of Water.jpg" border="0" alt="" selectedfileurl="files/Glass of Water.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=133768A461BEBE9FAF24A1886BD244DA?id=133225065&amp;_dt=1576616960048"></strong></span></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://menafn.com/1098518381/Looking-Younger-May-Be-a-Glass-of-Water-Away" target="_blank"><span style="font-size: 18pt;"><strong>Looking Younger May Be a Glass of Water Away</strong></span></a></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 
 <p style="font-weight: normal; font-size: 15px; text-align: center;"><a href="https://californer.com/dca/tip-of-the-week-3-surprising-ways-you-can-use-kale-in-your-beauty-routine-californer-10029819" target="_blank"><img title="" assetid="133247186" src="https://skinbyhaxton.com/image/Kale.jpg" border="0" alt="" selectedfileurl="files/Kale.jpg" mce_src="/matrix/servlet/ShowAsset;jsessionid=D2A5BBB865CA8E41D0F9523D2EC6B230?id=133247186&amp;_dt=1576908694206"></a></p>
 <p style="text-align: center;"><span style="color: #ffffff; text-decoration: none solid #ffffff;"><a style="color: #ffffff;" href="https://californer.com/dca/tip-of-the-week-3-surprising-ways-you-can-use-kale-in-your-beauty-routine-californer-10029819" target="_blank"><span style="font-size: 18pt;"><strong>TIP OF THE WEEK: 3 Surprising Ways You Can Use Kale in Your Beauty Routine</strong></span></a></span></p>
 
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
 
 <p style="font-weight: normal; font-size: 15px;"><img width="640" title="" style="display: block; margin-left: auto; margin-right: auto;" assetid="101436583" src="image/101436583.jpg" height="430" border="0" alt="" selectedfileurl="selectedfileurl"></p>
 <p style="font-weight: normal; font-size: 15px;">&nbsp;</p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
+
 <p style="font-weight: normal; font-size: 15px;"><img width="406" title="" style="display: block; margin-left: auto; margin-right: auto;" assetid="100321319" src="image/100321319.jpg" height="640" border="0" alt="" selectedfileurl="selectedfileurl"></p>
-<p><span style="font-family: 'Times New Roman', Times, serif;"><font size="4"><strong>San Francisco Daily</strong></font></span></p>
+
+<div class="article-separator">
+	<span class="separator-symbol">✦</span>
+</div>
+
 <p style="font-weight: normal; font-size: 15px;"><font size="4"><strong>&nbsp;</strong></font></p>
 <p style="font-weight: normal; font-size: 15px;"><span style="font-family: 'Times New Roman', Times, serif; font-size: 24pt;"><font size="4"><strong><span style="color: #ff0000; text-decoration: none solid #ffffff;"></span></strong> </font> <img width="475" title="" style="display: block; margin-left: auto; margin-right: auto;" assetid="102260271" src="image/102260271.jpg" height="640" border="0" alt="" selectedfileurl="selectedfileurl"></span></p>
 <p style="font-weight: normal; font-size: 15px;"><span style="font-family: 'Times New Roman', Times, serif; font-size: 24pt;"><font size="4"><strong><span style="color: #ff0000; text-decoration: none solid #ffffff;"></span></strong></font></span></p></div></td>
