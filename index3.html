@@ -14,14 +14,20 @@
 
     <style>
         :root {
-            --primary-purple: #6b46c1;
-            --deep-purple: #4c1d95;
-            --light-purple: #a78bfa;
-            --accent-gold: #f59e0b;
+            --primary-purple: #4c1d95;
+            --deep-purple: #2d1b69;
+            --light-purple: #8b5cf6;
+            --accent-purple: #7c3aed;
+            --sophisticated-gold: #dbbb69;
+            --warm-gold: #e5c876;
+            --deep-gold: #c8a554;
+            --luxury-gold: #f4e6a7;
             --soft-white: #fefefe;
-            --warm-gray: #f7f7f7;
-            --text-dark: #1f2937;
-            --text-gray: #6b7280;
+            --warm-cream: #faf8f5;
+            --elegant-gray: #f8f7f4;
+            --text-dark: #1a1a2e;
+            --text-gray: #5a5a6b;
+            --text-light: #8b8b9a;
         }
 
         * {
@@ -34,7 +40,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background: linear-gradient(135deg, var(--warm-gray) 0%, #ffffff 100%);
+            background: linear-gradient(135deg, var(--warm-cream) 0%, var(--soft-white) 100%);
         }
 
         .container {
@@ -45,13 +51,14 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(107, 70, 193, 0.1);
+            box-shadow: 0 2px 25px rgba(76, 29, 149, 0.08);
+            border-bottom: 1px solid var(--luxury-gold);
         }
 
         nav {
@@ -64,9 +71,23 @@
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--primary-purple);
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), transparent);
         }
 
         .nav-links {
@@ -94,7 +115,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-gold);
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold));
             transition: width 0.3s ease;
         }
 
@@ -103,18 +124,21 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, var(--primary-purple), var(--deep-purple));
-            color: white;
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--deep-gold));
+            color: var(--text-dark);
             padding: 12px 24px;
-            border-radius: 30px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(107, 70, 193, 0.3);
+            background: linear-gradient(135deg, var(--warm-gold), var(--sophisticated-gold));
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
         }
 
         /* Hero Section */
@@ -175,34 +199,38 @@
         }
 
         .btn-primary {
-            background: var(--accent-gold);
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
             color: var(--text-dark);
             padding: 15px 30px;
-            border-radius: 30px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 6px 20px rgba(219, 187, 105, 0.3);
         }
 
         .btn-primary:hover {
-            background: #d97706;
+            background: linear-gradient(135deg, var(--warm-gold), var(--luxury-gold));
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
         }
 
         .btn-secondary {
-            border: 2px solid white;
-            color: white;
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
             padding: 13px 30px;
-            border-radius: 30px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: white;
+            background: var(--luxury-gold);
             color: var(--primary-purple);
+            border-color: var(--luxury-gold);
         }
 
         .hero-image {
@@ -229,8 +257,23 @@
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem;
-            color: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--primary-purple));
         }
 
         .section-header p {
@@ -247,36 +290,60 @@
         }
 
         .service-card {
-            background: white;
+            background: linear-gradient(135deg, var(--soft-white) 0%, var(--warm-cream) 100%);
             padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(107, 70, 193, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #f3f4f6;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(76, 29, 149, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--luxury-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--primary-purple));
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(107, 70, 193, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(76, 29, 149, 0.12), 0 0 0 1px var(--sophisticated-gold);
+            background: linear-gradient(135deg, var(--soft-white) 0%, var(--luxury-gold) 100%);
         }
 
         .service-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--light-purple), var(--primary-purple));
-            border-radius: 15px;
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--deep-gold));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--text-dark);
             font-size: 1.5rem;
+            box-shadow: 0 6px 20px rgba(219, 187, 105, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary-purple), var(--accent-purple));
+            color: white;
+            transform: scale(1.05);
         }
 
         .service-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
-            color: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 30%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
         }
 
@@ -288,7 +355,20 @@
         /* Testimonial Section */
         .testimonial {
             padding: 100px 0;
-            background: linear-gradient(135deg, var(--warm-gray) 0%, #ffffff 100%);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(219, 187, 105, 0.1) 50%, transparent 70%);
+            pointer-events: none;
         }
 
         .testimonial-content {
@@ -301,14 +381,15 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-style: italic;
-            color: var(--primary-purple);
+            color: var(--luxury-gold);
             margin-bottom: 2rem;
             line-height: 1.6;
+            position: relative;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--sophisticated-gold);
         }
 
         /* Contact Section */
@@ -327,7 +408,10 @@
         .contact-info h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1.5rem;
         }
 
@@ -338,8 +422,8 @@
         }
 
         .contact-item i {
-            background: var(--light-purple);
-            color: white;
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -347,6 +431,7 @@
             align-items: center;
             justify-content: center;
             margin-right: 1rem;
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
         }
 
         .contact-item span {
@@ -355,8 +440,12 @@
         }
 
         .contact-item a {
-            color: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
+            font-weight: 600;
         }
 
         .map-container {
@@ -373,9 +462,21 @@
 
         /* Footer */
         footer {
-            background: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%);
             color: white;
             padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold), var(--sophisticated-gold));
         }
 
         .footer-content {
@@ -388,6 +489,7 @@
         .footer-section h3 {
             font-family: 'Playfair Display', serif;
             margin-bottom: 1rem;
+            color: var(--luxury-gold);
         }
 
         .footer-section a {
@@ -418,7 +520,9 @@
         }
 
         .social-links a:hover {
-            background: var(--accent-gold);
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
