@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haxton's Treatments | Transformational Skin Solutions | Los Altos</title>
+    <meta name="description" content="Discover Richard Haxton's signature facial treatments and non-surgical rejuvenation services. Award-winning anti-aging solutions for all skin types in Los Altos, CA.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-purple: #561773;
+            --deep-purple: #3d1052;
+            --light-purple: #7d2894;
+            --accent-purple: #6b1e85;
+            --sophisticated-gold: #dbbb69;
+            --warm-gold: #e5c876;
+            --deep-gold: #c8a554;
+            --luxury-gold: #f4e6a7;
+            --soft-white: #fefefe;
+            --warm-cream: #faf8f5;
+            --elegant-gray: #f8f7f4;
+            --text-dark: #1a1a2e;
+            --text-gray: #5a5a6b;
+            --text-light: #8b8b9a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--warm-cream) 0%, var(--soft-white) 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 25px rgba(86, 23, 115, 0.08);
+            border-bottom: 1px solid var(--luxury-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), transparent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--deep-gold));
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, var(--warm-gold), var(--sophisticated-gold));
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(219, 187, 105, 0.1) 50%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--luxury-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 6px 20px rgba(219, 187, 105, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--warm-gold), var(--luxury-gold));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--luxury-gold);
+            color: var(--luxury-gold);
+            padding: 13px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--luxury-gold);
+            color: var(--primary-purple);
+            border-color: var(--luxury-gold);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--primary-purple));
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .treatment-card {
+            background: linear-gradient(135deg, var(--soft-white) 0%, var(--warm-cream) 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(86, 23, 115, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--luxury-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treatment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--primary-purple));
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(86, 23, 115, 0.12), 0 0 0 1px var(--sophisticated-gold);
+            background: linear-gradient(135deg, var(--soft-white) 0%, var(--luxury-gold) 100%);
+        }
+
+        .treatment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .treatment-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            background: linear-gradient(135deg, var(--primary-purple) 30%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            flex: 1;
+        }
+
+        .price {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-left: 1rem;
+            box-shadow: 0 2px 10px rgba(219, 187, 105, 0.3);
+        }
+
+        .treatment-duration {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-benefits {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .treatment-benefits li {
+            color: var(--text-gray);
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .treatment-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sophisticated-gold);
+            font-weight: bold;
+        }
+
+        .award-badge {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* Before/After Gallery */
+        .gallery {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--elegant-gray) 0%, var(--soft-white) 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(86, 23, 115, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
+        }
+
+        .contact-item span {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .contact-item a {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--sophisticated-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold), var(--sophisticated-gold));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: var(--luxury-gold);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--warm-gold));
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .treatment-header {
+                flex-direction: column;
+            }
+
+            .price {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                align-self: flex-start;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index3.html" class="logo">Skin by Haxton</a>
+            <ul class="nav-links">
+                <li><a href="index3.html">Home</a></li>
+                <li><a href="facials3.html" class="active">Treatments</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="reviews.html">Press</a></li>
+                <li><a href="yelp-reviews-and-testimonials.html">Reviews</a></li>
+                <li><a href="season-specials.html">Specials</a></li>
+                <li><a href="about-us.html">About Haxton</a></li>
+            </ul>
+            <a href="tel:650-815-9976" class="cta-button">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Haxton's Signature Treatments</h1>
+                <p class="tagline">It's never too early or too late to look healthier and younger!</p>
+                <p class="subtitle">Discover award-winning, non-surgical facial rejuvenation treatments that deliver visible results from the very first session. The natural alternative to injections and plastic surgery.</p>
+                <div class="hero-buttons">
+                    <a href="tel:650-815-9976" class="btn-primary">Schedule Consultation</a>
+                    <a href="#treatments" class="btn-secondary">Explore Treatments</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section class="services" id="treatments">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Signature Treatment Menu</h2>
+                <p>Experience Richard Haxton's award-winning facial treatments, each designed to reveal your natural radiance and turn back the hands of time.</p>
+            </div>
+
+            <div class="treatments-grid">
+                <!-- Non-Surgical Face Lift -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Amazing Non-Surgical Face Lift</h3>
+                        </div>
+                        <div class="price">$345</div>
+                    </div>
+                    <p>Revolutionary age-reversing technology combining clinical micro-dermabrasion with endermologie and proprietary methods for a more youthful, smooth and sculpted appearance.</p>
+                    <ul class="treatment-benefits">
+                        <li>No downtime required</li>
+                        <li>No harsh chemicals or injections</li>
+                        <li>Suitable for all ages and skin types</li>
+                        <li>Immediate visible results</li>
+                        <li>Comprehensive before/after gallery available</li>
+                    </ul>
+                </div>
+
+                <!-- Facial Sculpting -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Exclusive Facial Sculpting</h3>
+                        </div>
+                        <div class="price">$250</div>
+                    </div>
+                    <p>Winner of "Best Beauty Treatment in Silicon Valley 2024" - offsets environmental aging for a more lifted, sculpted, and rejuvenated appearance.</p>
+                    <ul class="treatment-benefits">
+                        <li>Award-winning technique</li>
+                        <li>Includes customized treatment mask</li>
+                        <li>Erases effects of aging</li>
+                        <li>Environmentally protective benefits</li>
+                    </ul>
+                    <div class="award-badge">🏆 Best Beauty Treatment 2024</div>
+                </div>
+
+                <!-- Clinical Microdermabrasion -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Clinical Microdermabrasion Treatment</h3>
+                        </div>
+                        <div class="price">$275</div>
+                    </div>
+                    <p>Advanced clinical microdermabrasion - a healthy alternative to medical resurfacing that improves lines, scars, and skin imperfections without downtime.</p>
+                    <ul class="treatment-benefits">
+                        <li>Best for treating acne and acne scars</li>
+                        <li>Reduces fine lines and sun damage</li>
+                        <li>No recovery period needed</li>
+                        <li>Professional-grade results</li>
+                    </ul>
+                </div>
+
+                <!-- Light Rejuvenation -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Light Rejuvenation with Ultrasound</h3>
+                        </div>
+                        <div class="price">$175</div>
+                    </div>
+                    <p>Advanced LED technology using Red Light (640nm) and Blue Light (480nm) for comprehensive skin rejuvenation.</p>
+                    <ul class="treatment-benefits">
+                        <li>Smooths wrinkles and stimulates collagen</li>
+                        <li>Reduces age spots and dark circles</li>
+                        <li>Brightens complexion immediately</li>
+                        <li>Reduces pore size and improves circulation</li>
+                        <li>Beneficial addition to other treatments</li>
+                    </ul>
+                </div>
+
+                <!-- Radiance Treatment -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's One-of-a-Kind Radiance Treatment</h3>
+                        </div>
+                        <div class="price">$150</div>
+                    </div>
+                    <p>Anti-aging, all-in-one skin treatment with results of acid peels without acids. Safe for all skin types.</p>
+                    <ul class="treatment-benefits">
+                        <li>Firms and exfoliates skin</li>
+                        <li>Detoxifies and brightens</li>
+                        <li>Nourishes with essential vitamins</li>
+                        <li>Reduces acne naturally</li>
+                    </ul>
+                </div>
+
+                <!-- Chemical Peels -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Transformational Chemical Peels</h3>
+                        </div>
+                        <div class="price">From $150</div>
+                    </div>
+                    <p>Customized chemical peels that brighten and tighten skin for plump, hydrated, smooth results. Dramatically improves weathered, sun-damaged skin.</p>
+                    <ul class="treatment-benefits">
+                        <li>Face only: Starting at $150</li>
+                        <li>Face, Neck & Upper Chest: Starting at $300</li>
+                        <li>Suitable for all skin types</li>
+                        <li>Reduces aging effects dramatically</li>
+                    </ul>
+                </div>
+
+                <!-- Signature Facial -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Signature Facial Treatment</h3>
+                        </div>
+                        <div class="price">$170</div>
+                    </div>
+                    <p>Customized cleansing treatment to exfoliate, detoxify, refine pores, and improve skin tone. Includes hydrating hand treatment.</p>
+                    <ul class="treatment-benefits">
+                        <li>Excellent introduction to facial treatments</li>
+                        <li>Includes complimentary hand treatment</li>
+                        <li>Customized to your skin needs</li>
+                        <li>Perfect for first-time clients</li>
+                    </ul>
+                </div>
+
+                <!-- Teen Facial -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Teen Facial Treatment</h3>
+                        </div>
+                        <div class="price">$175</div>
+                    </div>
+                    <p>Perfect introduction to good skincare for teens. Balances adolescent skin and minimizes acne problems naturally.</p>
+                    <ul class="treatment-benefits">
+                        <li>Designed specifically for teen skin</li>
+                        <li>Minimizes acne problems</li>
+                        <li>Suitable for all skin types</li>
+                        <li>Educational skincare guidance included</li>
+                    </ul>
+                </div>
+
+                <!-- Eyebrow Services -->
+                <div class="treatment-card fade-in">
+                    <div class="treatment-header">
+                        <div>
+                            <h3>Haxton's Eyebrow Artistry</h3>
+                        </div>
+                        <div class="price">$50-$75</div>
+                    </div>
+                    <p>Professional eyebrow and lash services customized to enhance your facial structure and natural beauty.</p>
+                    <ul class="treatment-benefits">
+                        <li>Brow Sculpting: $75 (custom facial evaluation)</li>
+                        <li>Brow Tint: $50</li>
+                        <li>Lash Tint: $75</li>
+                        <li>Expert facial structure analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header fade-in">
+                <h2>Advanced Skin Analysis</h2>
+                <p>Every treatment includes Haxton's comprehensive skin analysis to ensure optimal results.</p>
+            </div>
+
+            <div class="treatment-card fade-in" style="max-width: 600px; margin: 0 auto;">
+                <div class="treatment-header">
+                    <div>
+                        <h3>Haxton's Professional Skin Analysis</h3>
+                        <div class="treatment-duration">30 minutes</div>
+                    </div>
+                    <div class="price">$100</div>
+                </div>
+                <p>Comprehensive skin evaluation and consultation included complimentary with all treatments. Available as standalone service for treatment planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Transformation Gallery</h2>
+                <p>See the remarkable results achieved with Haxton's treatments across all skin types and ethnicities.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="image/side by side before and after asian woman.jpg" alt="Asian woman before and after results">
+                </div>
+                <div class="gallery-item">
+                    <img src="image/before-after.jpg" alt="Multiple before and after transformations">
+                </div>
+                <div class="gallery-item">
+                    <img src="image/before-dude.jpeg" alt="Male client before and after results">
+                </div>
+                <div class="gallery-item">
+                    <img src="image/bio-pic.jpg" alt="Richard Haxton professional photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h2>Schedule Your Transformation</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-gray); font-size: 1.1rem;">Ready to experience award-winning facial treatments? Book your consultation today.</p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:650-815-9976">(650) 815-9976</a></span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>745 Distel Dr., Suite 201<br>Los Altos, CA 94022</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Tuesday - Saturday<br>11:00 AM - 7:00 PM</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span style="font-size: 0.9rem; color: var(--text-gray);">48-hour cancellation policy required</span>
+                    </div>
+                </div>
+
+                <div class="contact-info fade-in">
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-purple);">Advanced Age-Reversing Cosmeceuticals</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--text-gray);">Exclusive "Reverse Time" skincare system available only for clients.</p>
+                    <ul class="treatment-benefits">
+                        <li>Advanced antioxidants and respiratory factors</li>
+                        <li>Smoother, firmer, more luminous appearance</li>
+                        <li>Professional-grade formulations</li>
+                        <li>Exclusive to Haxton clients only</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Skin by Haxton</h3>
+                    <p>Award-winning non-surgical facial rejuvenation treatments for all skin types. The natural alternative to injections and plastic surgery.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SkinByHaxton/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/richard_haxton" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/skinbyhaxton/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.pinterest.com/haxton10" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Treatments</h3>
+                    <p><a href="#treatments">Non-Surgical Facelifts</a></p>
+                    <p><a href="#treatments">Facial Sculpting</a></p>
+                    <p><a href="#treatments">Clinical Microdermabrasion</a></p>
+                    <p><a href="#treatments">Light Rejuvenation</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="about-us.html">About Richard Haxton</a></p>
+                    <p><a href="reviews.html">Press & Media</a></p>
+                    <p><a href="yelp-reviews-and-testimonials.html">Client Reviews</a></p>
+                    <p><a href="season-specials.html">Current Specials</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Richard Haxton's Transformational Skin Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.treatment-card, .section-header, .contact-info, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
