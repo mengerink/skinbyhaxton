@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Specials - Skin by Haxton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #561773;
+            --sophisticated-gold: #dbbb69;
+            --warm-gold: #e5c876;
+            --deep-gold: #c8a554;
+            --luxury-gold: #f4e6a7;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --background-light: #fafafa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 25px rgba(86, 23, 115, 0.08);
+            border-bottom: 1px solid var(--luxury-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--deep-gold));
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, var(--warm-gold), var(--sophisticated-gold));
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .special-package {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(86, 23, 115, 0.15);
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-package::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--sophisticated-gold));
+        }
+
+        .package-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+        }
+
+        .discount-badge {
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(86, 23, 115, 0.3);
+        }
+
+        .price-section {
+            margin: 2rem 0;
+        }
+
+        .current-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--sophisticated-gold);
+            margin-bottom: 1rem;
+        }
+
+        .original-price {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-bottom: 1rem;
+        }
+
+        .savings {
+            font-size: 1.2rem;
+            color: var(--primary-purple);
+            font-weight: 600;
+        }
+
+        .treatments-included {
+            background: linear-gradient(135deg, rgba(86, 23, 115, 0.05), rgba(219, 187, 105, 0.05));
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .treatments-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 2rem;
+        }
+
+        .treatment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .treatment-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(86, 23, 115, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .treatment-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .treatment-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .treatment-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-purple);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background: var(--luxury-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: var(--luxury-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            background: rgba(86, 23, 115, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .special-package {
+                padding: 2rem;
+            }
+
+            .package-title {
+                font-size: 2.2rem;
+            }
+
+            .current-price {
+                font-size: 3rem;
+            }
+
+            .treatment-list {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section {
+                padding: 2rem;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index3.html" class="logo">Skin by Haxton</a>
+            <ul class="nav-links">
+                <li><a href="facials3.html">Treatments</a></li>
+                <li><a href="Blog3.html">Blog</a></li>
+                <li><a href="reviews3.html">Press</a></li>
+                <li><a href="yelp-reviews-and-testimonials3.html">Reviews</a></li>
+                <li><a href="season-specials3.html" class="active">Specials</a></li>
+                <li><a href="about-us3.html">About Haxton</a></li>
+            </ul>
+            <a href="tel:650-815-9976" class="cta-button">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>This Season's Special</h1>
+            <p class="hero-subtitle">Transform your skin with our exclusive rejuvenation package - Silicon Valley's most sought-after anti-aging treatments at an incredible value</p>
+            <div class="hero-highlight">Limited Time Offer</div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="special-package">
+            <h2 class="package-title">The Rejuvenation Package</h2>
+
+            <div class="discount-badge">Over 65% OFF</div>
+
+            <div class="price-section">
+                <div class="current-price">$250</div>
+                <div class="original-price">Regular Value: $720+</div>
+                <div class="savings">You Save Over $470!</div>
+            </div>
+
+            <div class="treatments-included">
+                <h3 class="treatments-title">This Exclusive Package Includes:</h3>
+
+                <div class="treatment-list">
+                    <div class="treatment-item">
+                        <div class="treatment-icon">🔍</div>
+                        <div class="treatment-text">HAXTON's Comprehensive Skin Analysis</div>
+                    </div>
+
+                    <div class="treatment-item">
+                        <div class="treatment-icon">✨</div>
+                        <div class="treatment-text">HAXTON's Exclusive Facial Sculpting</div>
+                    </div>
+
+                    <div class="treatment-item">
+                        <div class="treatment-icon">🌟</div>
+                        <div class="treatment-text">HAXTON's One-of-a-Kind Radiance Treatment</div>
+                    </div>
+
+                    <div class="treatment-item">
+                        <div class="treatment-icon">🔬</div>
+                        <div class="treatment-text">HAXTON's Skin Rejuvenation using Light Diodes and Ultrasound</div>
+                    </div>
+
+                    <div class="treatment-item">
+                        <div class="treatment-icon">💎</div>
+                        <div class="treatment-text">HAXTON's Enriched Vitamin and Peptide Rebalancing Treatment</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3 class="cta-title">Ready to Transform Your Skin?</h3>
+                <p class="cta-text">Experience Silicon Valley's award-winning anti-aging treatments. Book your consultation today and discover why celebrities and tech executives choose Richard Haxton.</p>
+
+                <a href="tel:650-815-9976" class="cta-button">Call Now: 650-815-9976</a>
+
+                <div class="contact-info">
+                    <p><strong>Location:</strong> 745 Distel Dr, Suite 201, Los Altos, CA 94022</p>
+                    <p>For detailed treatment descriptions, visit <a href="facials.html">Haxton's Treatments</a></p>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <strong>Important:</strong> Specials cannot be combined with any other promotions. Limited time offer. New clients only. Call to schedule your appointment and secure this exclusive pricing.
+            </div>
+        </div>
+
+        <section style="background: var(--white); border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(86, 23, 115, 0.1);">
+            <div style="text-align: center;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary-purple); margin-bottom: 2rem;">Why Choose Richard Haxton?</h3>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🏆</div>
+                        <h4 style="color: var(--primary-purple); margin-bottom: 0.5rem;">Award Winning</h4>
+                        <p style="color: var(--text-light);">Best Non-Surgical Anti-Aging Treatment 2024</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">⭐</div>
+                        <h4 style="color: var(--primary-purple); margin-bottom: 0.5rem;">20+ Years</h4>
+                        <p style="color: var(--text-light);">Silicon Valley's #1 Anti-Aging Specialist</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🎯</div>
+                        <h4 style="color: var(--primary-purple); margin-bottom: 0.5rem;">Immediate Results</h4>
+                        <p style="color: var(--text-light);">Visible improvements from your first session</p>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-size: 1.5rem;">🌿</div>
+                        <h4 style="color: var(--primary-purple); margin-bottom: 0.5rem;">Natural Methods</h4>
+                        <p style="color: var(--text-light);">Non-surgical, holistic approach to beauty</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: var(--primary-purple); color: white; padding: 2rem 0; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+            <div style="font-size: 0.9rem; opacity: 0.8;">
+                © 2025 Richard Haxton's Transformational Skin Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

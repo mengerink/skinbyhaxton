@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Richard Haxton - Skin by Haxton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #561773;
+            --sophisticated-gold: #dbbb69;
+            --warm-gold: #e5c876;
+            --deep-gold: #c8a554;
+            --luxury-gold: #f4e6a7;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --background-light: #fafafa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 25px rgba(86, 23, 115, 0.08);
+            border-bottom: 1px solid var(--luxury-gold);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-purple);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sophisticated-gold), var(--warm-gold));
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--sophisticated-gold), var(--deep-gold));
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 4px 15px rgba(219, 187, 105, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, var(--warm-gold), var(--sophisticated-gold));
+            box-shadow: 0 8px 25px rgba(219, 187, 105, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-credentials {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .bio-section {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(86, 23, 115, 0.1);
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--sophisticated-gold));
+        }
+
+        .bio-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .bio-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, rgba(86, 23, 115, 0.05), rgba(219, 187, 105, 0.05));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(86, 23, 115, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(86, 23, 115, 0.15);
+        }
+
+        .achievement-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .achievement-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--luxury-gold);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: white;
+        }
+
+        .awards-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .award-image {
+            max-width: 200px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .award-image:hover {
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: var(--primary-purple);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+
+            .bio-section {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+
+            .awards-section {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index3.html" class="logo">Skin by Haxton</a>
+            <ul class="nav-links">
+                <li><a href="facials3.html">Treatments</a></li>
+                <li><a href="Blog3.html">Blog</a></li>
+                <li><a href="reviews3.html">Press</a></li>
+                <li><a href="yelp-reviews-and-testimonials3.html">Reviews</a></li>
+                <li><a href="season-specials3.html">Specials</a></li>
+                <li><a href="about-us3.html" class="active">About Haxton</a></li>
+            </ul>
+            <a href="tel:650-815-9976" class="cta-button">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Richard Haxton</h1>
+                <p class="hero-subtitle">Master Clinical Esthetician</p>
+                <p class="hero-credentials">Anti-Aging Facial Rejuvenation Specialist</p>
+                <p class="hero-credentials">Silicon Valley's #1 Anti-Aging Expert for Over 2 Decades</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://skinbyhaxton.com/image/bio-pic.jpg" alt="Richard Haxton" style="width: 300px; height: 400px; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="bio-section">
+            <h2 class="section-title">Biography</h2>
+            <div class="bio-content">
+                <p><strong>RICHARD HAXTON</strong> is an internationally recognized expert in non-surgical rejuvenation, acclaimed for his extraordinary abilities and innovative techniques. With a diverse background in dermatology, herbology, vitamin therapy, cosmetic chemistry, endermology, nutrition, acupuncture, acupressure, ethnic skin care, and advanced Asian and European anti-aging facial methods, he brings a uniquely holistic approach to beauty and wellness.</p>
+
+                <p>His studies have also encompassed behavioral therapy for stress-related skin conditions, along with specialized training under leading medical doctors. HAXTON has trained at the Integrated Medicine Center, The Dermal Institute, and numerous other advanced educational programs.</p>
+
+                <p>A former professional model, HAXTON's pursuit of skin health began as a personal mission. Frustrated by ineffective products, facials, and traditional medical treatments—and after spending thousands of dollars without results—he set out to develop solutions for himself and others. His breakthroughs not only transformed his own skin but also launched a lifelong dedication to advancing the field of natural rejuvenation.</p>
+
+                <p>His methods and results have been featured on television and in print media worldwide, earning him a reputation as a pioneer in anti-aging, beauty, and holistic wellness.</p>
+
+                <p>HAXTON's success in reversing his own acne scars and discoloration astounded medical professionals, who confirmed a 95% improvement—far surpassing the 40% improvement plastic surgeons said could be achieved through $50,000 in surgery.</p>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <h3 class="achievement-title">Award Winning</h3>
+                <p class="achievement-desc">Best Non-Surgical Anti-Aging Treatment Silicon Valley 2024</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">⭐</div>
+                <h3 class="achievement-title">20+ Years Experience</h3>
+                <p class="achievement-desc">Over two decades of transforming skin and lives</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🌟</div>
+                <h3 class="achievement-title">Media Featured</h3>
+                <p class="achievement-desc">Television and print media worldwide recognition</p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">💎</div>
+                <h3 class="achievement-title">Holistic Approach</h3>
+                <p class="achievement-desc">Unique blend of Eastern and Western techniques</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h3 class="contact-title">Visit Richard Haxton's Transformational Skin Solutions</h3>
+            <div class="contact-info">
+                <strong>Address:</strong> 745 Distel Dr, Suite 201<br>
+                Los Altos, CA 94022
+            </div>
+            <div class="contact-info">
+                <strong>Phone:</strong> <a href="tel:650-815-9976">650-815-9976</a>
+            </div>
+            <div class="contact-info" style="margin-top: 1.5rem;">
+                Experience the difference that two decades of expertise can make.<br>
+                Your transformation begins here.
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/SkinByHaxton/" target="_blank" class="social-link" title="Facebook">
+                    📘
+                </a>
+                <a href="https://instagram.com/richard_haxton" target="_blank" class="social-link" title="Instagram">
+                    📷
+                </a>
+                <a href="https://www.linkedin.com/in/skinbyhaxton/" target="_blank" class="social-link" title="LinkedIn">
+                    💼
+                </a>
+            </div>
+        </section>
+
+        <section class="awards-section">
+            <img src="https://skinbyhaxton.com/image/purple Best non Surgical award-20250405134133.png" alt="Best Non-Surgical Award" class="award-image">
+            <img src="COC-A-Plus-Business.png" alt="Chamber of Commerce A+ Business" class="award-image">
+        </section>
+    </main>
+
+    <footer style="background: var(--primary-purple); color: white; padding: 2rem 0; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 2rem;">
+            <div style="font-size: 0.9rem; opacity: 0.8;">
+                © 2025 Richard Haxton's Transformational Skin Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
