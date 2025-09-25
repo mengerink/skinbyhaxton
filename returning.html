@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Soon - Skin by Haxton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #561773;
+            --sophisticated-gold: #dbbb69;
+            --warm-gold: #e5c876;
+            --deep-gold: #c8a554;
+            --luxury-gold: #f4e6a7;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --background-light: #fafafa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .main-content {
+            background: var(--white);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(86, 23, 115, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-purple), var(--sophisticated-gold));
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-purple);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-text {
+            color: var(--sophisticated-gold);
+            font-weight: 600;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-item {
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, rgba(86, 23, 115, 0.03), rgba(219, 187, 105, 0.03));
+            border-radius: 15px;
+            border: 1px solid rgba(86, 23, 115, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(86, 23, 115, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--sophisticated-gold));
+            border-radius: 15px;
+            color: var(--white);
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--luxury-gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--white);
+            color: var(--primary-purple);
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .main-content {
+                padding: 3rem 2rem;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="logo">Skin by Haxton</div>
+
+            <h1 class="main-title">Returning Soon</h1>
+
+            <p class="subtitle">
+                We're taking a brief pause to bring you even more <span class="highlight-text">exceptional treatments</span>
+                and <span class="highlight-text">innovative skincare solutions</span>. Your radiant transformation awaits.
+            </p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Enhanced Treatments</h3>
+                    <p class="feature-description">New advanced anti-aging techniques and rejuvenation protocols</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h3 class="feature-title">Premium Services</h3>
+                    <p class="feature-description">Elevated skincare experiences with the latest innovations</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="feature-title">Exclusive Access</h3>
+                    <p class="feature-description">Priority scheduling for returning clients and new treatment options</p>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="contact-title">Stay Connected</h2>
+                <div class="contact-info">
+                    <strong>Phone:</strong> <a href="tel:650-815-9976">650-815-9976</a>
+                </div>
+                <div class="contact-info">
+                    <strong>Location:</strong> Redwood City, CA
+                </div>
+                <div class="contact-info" style="margin-top: 1rem;">
+                    For appointments and inquiries, please call or follow us on social media for updates.
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/SkinByHaxton/" target="_blank" class="social-link" title="Facebook">
+                        📘
+                    </a>
+                    <a href="https://instagram.com/richard_haxton" target="_blank" class="social-link" title="Instagram">
+                        📷
+                    </a>
+                    <a href="https://www.linkedin.com/in/skinbyhaxton/" target="_blank" class="social-link" title="LinkedIn">
+                        💼
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-text">
+                Thank you for your patience. We look forward to serving you again soon.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
