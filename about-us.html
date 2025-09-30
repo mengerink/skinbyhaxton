@@ -414,21 +414,50 @@ h6{
         width: 100% !important;
     }
 
-    /* Complete table restructure for mobile */
-    table,
-    tbody,
-    tr,
-    td {
+    /* Complete table restructure for mobile - except hero section */
+    table:not(.hero-table),
+    tbody:not(.hero-table tbody),
+    tr:not(.hero-table tr),
+    td:not(.hero-table td) {
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 5px !important;
         border: none !important;
         background-image: none !important;
     }
 
-    /* Force all content into single column */
+    /* Preserve hero section layout but make it responsive */
+    table[cellpadding="20"] {
+        display: table !important;
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    table[cellpadding="20"] tr {
+        display: table-row !important;
+    }
+
+    table[cellpadding="20"] td {
+        display: table-cell !important;
+        vertical-align: top !important;
+        padding: 10px !important;
+    }
+
+    /* Text column responsive */
+    table[cellpadding="20"] td[width="50%"]:first-child {
+        width: 60% !important;
+        text-align: center !important;
+    }
+
+    /* Image column responsive */
+    table[cellpadding="20"] td[width="50%"]:last-child {
+        width: 40% !important;
+        text-align: center !important;
+    }
+
+    /* Force most content into single column but preserve some layouts */
     .content_bg,
     #nav,
     #layout,
@@ -441,6 +470,44 @@ h6{
         display: block !important;
         float: none !important;
         position: static !important;
+    }
+
+    /* Fix horizontal underscore lines to mobile width */
+    span:contains("__________________________________________________________________________________________") {
+        font-size: 0 !important;
+        display: block !important;
+        width: 90% !important;
+        height: 2px !important;
+        background-color: #FFFFFF !important;
+        margin: 0 auto !important;
+        border-bottom: 1px solid #FFFFFF !important;
+        text-indent: -9999px !important;
+    }
+
+    span:contains("__________________________________________________________________________________________"):before {
+        content: '' !important;
+        display: block !important;
+        width: 100% !important;
+        height: 1px !important;
+        background-color: #FFFFFF !important;
+    }
+
+    /* Center all content in bio section */
+    table[cellpadding="50"] {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    table[cellpadding="50"] td {
+        text-align: center !important;
+        padding: 20px !important;
+    }
+
+    /* Fix text alignment issues */
+    p {
+        text-align: center !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
 
     /* Remove all fixed widths and decorative elements */
