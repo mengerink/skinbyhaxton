@@ -357,11 +357,51 @@ h6{
         max-width: 100% !important;
         height: auto !important;
     }
+
+    /* Hide decorative border elements on mobile */
+    .left_border,
+    .right_border {
+        display: none !important;
+    }
+
+    /* Fix table structure for mobile */
+    .top_border,
+    .bottom_border {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Override fixed table cell widths */
+    td[width="8"] {
+        width: 0 !important;
+        display: none !important;
+    }
+
+    /* Fix specific wide images */
+    img[width="976"],
+    img[width="552"],
+    img[width="450"],
+    img[width="386"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Fix table with fixed width="40px" */
+    table[width="40px"] {
+        width: 100% !important;
+    }
+
+    /* Ensure no horizontal scrolling */
     body {
         overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
     }
     html {
         overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
     }
 }
 </style>
