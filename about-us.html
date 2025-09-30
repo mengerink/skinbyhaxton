@@ -4,6 +4,7 @@
 <title>Transformational Skin Solutions for anti-aging, acne, problem skin, beauty</title>
 	<link rel="canonical" href="http://skinbyhaxton.com/about-us.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Cache-Control" content="max-age=1800">
 <meta name="ROBOTS" content="INDEX,FOLLOW"><meta name="DESCRIPTION" content="An anti-aging facial rejuvenation Specialist/Clinical Esthetician acknowledged number 1 for over 2 decades for his unique abilities in transforming skin from problematic to healthy, radiant, &amp; younger"><meta name="KEYWORDS" content="Number 1 esthetician, Number 1 in anti-aging, avoid facelift, Number 1 facialist, microdermabration, chemical peel, facials, acne, puffy face, double chin, wrinkles, plastic surgery, aging skin, medi-spa, scars, sagging skin, ethnic skin, men's facials, facial sculpting, beauty, dark circles, skin care, eyebrows, anti-aging, esthetician, facial, botox, juvederm, filler, facelift, ethnic skin, best facial, men, chinese, korean, skin care, chinese skin care, indian skin care, south asian, bay area, silicon valley, los altos, Number 1 in los altos, Richard Haxton, Haxton, Non-Surgical, Rejuvenation, Non-Surgical Rejuvenation   Best Esthetician Los Altos Anti Aging television celebrity
  Include Default Keywords
@@ -270,8 +271,29 @@ h6{
 .webCom-color-secondary {color: #ffffff;}
 .webCom-backgroundColor-secondary {background-color: #290E2F}
 
-/* Mobile responsive fixes */
+/* Mobile responsive fixes - Complete rewrite for mobile */
 @media only screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box !important;
+    }
+
+    /* Add viewport meta tag enforcement */
+    html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 320px !important;
+    }
     #wrapper {
         width: 100% !important;
         max-width: 100% !important;
@@ -392,16 +414,68 @@ h6{
         width: 100% !important;
     }
 
-    /* Ensure no horizontal scrolling */
-    body {
-        overflow-x: hidden !important;
+    /* Complete table restructure for mobile */
+    table,
+    tbody,
+    tr,
+    td {
+        display: block !important;
         width: 100% !important;
-        max-width: 100vw !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background-image: none !important;
     }
-    html {
-        overflow-x: hidden !important;
+
+    /* Force all content into single column */
+    .content_bg,
+    #nav,
+    #layout,
+    #globaltext,
+    #footer_area {
         width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        display: block !important;
+        float: none !important;
+        position: static !important;
+    }
+
+    /* Remove all fixed widths and decorative elements */
+    .left_border,
+    .right_border,
+    .top_border,
+    .bottom_border {
+        display: none !important;
+    }
+
+    /* Force viewport constraints */
+    body,
+    html,
+    #wrapper,
+    #cn_wrapper {
+        width: 100vw !important;
         max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Force all images to be responsive */
+    img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Remove all background images that might cause width issues */
+    * {
+        background-image: none !important;
+        background-size: contain !important;
     }
 }
 </style>
