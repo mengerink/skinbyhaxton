@@ -4,7 +4,6 @@
 <title>Transformational Skin Solutions for anti-aging, acne, problem skin, beauty</title>
 	<link rel="canonical" href="http://skinbyhaxton.com/about-us.html" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Cache-Control" content="max-age=1800">
 <meta name="ROBOTS" content="INDEX,FOLLOW"><meta name="DESCRIPTION" content="An anti-aging facial rejuvenation Specialist/Clinical Esthetician acknowledged number 1 for over 2 decades for his unique abilities in transforming skin from problematic to healthy, radiant, &amp; younger"><meta name="KEYWORDS" content="Number 1 esthetician, Number 1 in anti-aging, avoid facelift, Number 1 facialist, microdermabration, chemical peel, facials, acne, puffy face, double chin, wrinkles, plastic surgery, aging skin, medi-spa, scars, sagging skin, ethnic skin, men's facials, facial sculpting, beauty, dark circles, skin care, eyebrows, anti-aging, esthetician, facial, botox, juvederm, filler, facelift, ethnic skin, best facial, men, chinese, korean, skin care, chinese skin care, indian skin care, south asian, bay area, silicon valley, los altos, Number 1 in los altos, Richard Haxton, Haxton, Non-Surgical, Rejuvenation, Non-Surgical Rejuvenation   Best Esthetician Los Altos Anti Aging television celebrity
  Include Default Keywords
@@ -271,55 +270,108 @@ h6{
 .webCom-color-secondary {color: #ffffff;}
 .webCom-backgroundColor-secondary {background-color: #290E2F}
 
-/* Mobile responsive fixes - Minimal changes to preserve desktop layout */
+/* Mobile responsive fixes */
 @media only screen and (max-width: 768px) {
-    /* Just fix the container widths that cause horizontal overflow */
     #wrapper {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto !important;
+        min-width: 320px !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     #cn_wrapper {
         width: 100% !important;
         max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     #companyname {
         width: 100% !important;
         max-width: 100% !important;
+        padding: 5px !important;
+        box-sizing: border-box !important;
     }
     #companyslogan {
         width: 100% !important;
         max-width: 100% !important;
+        padding: 5px !important;
+        box-sizing: border-box !important;
+    }
+    #kv_border {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    #kv_area {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+    #kv {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        float: none !important;
+        height: auto !important;
+    }
+    #globaltext2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+        height: auto !important;
+        margin-top: 10px !important;
+    }
+    #globaltext {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+    #layout {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
     }
     #footer_area {
         width: 100% !important;
         max-width: 100% !important;
+        padding: 5px !important;
+        box-sizing: border-box !important;
     }
     #footer {
         width: 100% !important;
         max-width: 100% !important;
     }
-
-    /* Hide only the decorative border table cells that cause overflow */
-    td.left_border,
-    td.right_border {
-        display: none !important;
+    table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
     }
-
-    /* Make images responsive but preserve layout */
+    td {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
     img {
         max-width: 100% !important;
         height: auto !important;
     }
 
-    /* Fix the bottom border image that's 976px wide */
+    /* Fix specific wide table cells */
+    td[width="960"] {
+        width: 100% !important;
+    }
+
+    /* Fix the 976px bottom border image */
     img[width="976"] {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    /* Prevent horizontal scrolling */
-    body,
+    body {
+        overflow-x: hidden !important;
+    }
     html {
         overflow-x: hidden !important;
     }
