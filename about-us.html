@@ -271,278 +271,57 @@ h6{
 .webCom-color-secondary {color: #ffffff;}
 .webCom-backgroundColor-secondary {background-color: #290E2F}
 
-/* Mobile responsive fixes - Complete rewrite for mobile */
+/* Mobile responsive fixes - Minimal changes to preserve desktop layout */
 @media only screen and (max-width: 768px) {
-    * {
-        box-sizing: border-box !important;
-    }
-
-    /* Add viewport meta tag enforcement */
-    html {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100vw !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        min-width: 320px !important;
-    }
+    /* Just fix the container widths that cause horizontal overflow */
     #wrapper {
         width: 100% !important;
         max-width: 100% !important;
-        min-width: 320px !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0 auto !important;
     }
     #cn_wrapper {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
     }
     #companyname {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 5px !important;
-        box-sizing: border-box !important;
     }
     #companyslogan {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 5px !important;
-        box-sizing: border-box !important;
-    }
-    #kv_border {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    #kv_area {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-    }
-    #kv {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        float: none !important;
-        height: auto !important;
-    }
-    #globaltext2 {
-        width: 100% !important;
-        max-width: 100% !important;
-        float: none !important;
-        height: auto !important;
-        margin-top: 10px !important;
-    }
-    #globaltext {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
-    }
-    #layout {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 10px !important;
-        box-sizing: border-box !important;
     }
     #footer_area {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 5px !important;
-        box-sizing: border-box !important;
     }
     #footer {
         width: 100% !important;
         max-width: 100% !important;
     }
-    table {
-        width: 100% !important;
-        max-width: 100% !important;
-        table-layout: fixed !important;
+
+    /* Hide only the decorative border table cells that cause overflow */
+    td.left_border,
+    td.right_border {
+        display: none !important;
     }
-    td {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-    }
+
+    /* Make images responsive but preserve layout */
     img {
         max-width: 100% !important;
         height: auto !important;
     }
 
-    /* Hide decorative border elements on mobile */
-    .left_border,
-    .right_border {
-        display: none !important;
-    }
-
-    /* Fix table structure for mobile */
-    .top_border,
-    .bottom_border {
+    /* Fix the bottom border image that's 976px wide */
+    img[width="976"] {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    /* Override fixed table cell widths */
-    td[width="8"] {
-        width: 0 !important;
-        display: none !important;
-    }
-
-    /* Fix specific wide images */
-    img[width="976"],
-    img[width="552"],
-    img[width="450"],
-    img[width="386"] {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Fix table with fixed width="40px" */
-    table[width="40px"] {
-        width: 100% !important;
-    }
-
-    /* Complete table restructure for mobile - except hero section */
-    table:not(.hero-table),
-    tbody:not(.hero-table tbody),
-    tr:not(.hero-table tr),
-    td:not(.hero-table td) {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 5px !important;
-        border: none !important;
-        background-image: none !important;
-    }
-
-    /* Preserve hero section layout but make it responsive */
-    table[cellpadding="20"] {
-        display: table !important;
-        width: 100% !important;
-        table-layout: fixed !important;
-    }
-
-    table[cellpadding="20"] tr {
-        display: table-row !important;
-    }
-
-    table[cellpadding="20"] td {
-        display: table-cell !important;
-        vertical-align: top !important;
-        padding: 10px !important;
-    }
-
-    /* Text column responsive */
-    table[cellpadding="20"] td[width="50%"]:first-child {
-        width: 60% !important;
-        text-align: center !important;
-    }
-
-    /* Image column responsive */
-    table[cellpadding="20"] td[width="50%"]:last-child {
-        width: 40% !important;
-        text-align: center !important;
-    }
-
-    /* Force most content into single column but preserve some layouts */
-    .content_bg,
-    #nav,
-    #layout,
-    #globaltext,
-    #footer_area {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 10px !important;
-        display: block !important;
-        float: none !important;
-        position: static !important;
-    }
-
-    /* Fix horizontal underscore lines to mobile width */
-    span:contains("__________________________________________________________________________________________") {
-        font-size: 0 !important;
-        display: block !important;
-        width: 90% !important;
-        height: 2px !important;
-        background-color: #FFFFFF !important;
-        margin: 0 auto !important;
-        border-bottom: 1px solid #FFFFFF !important;
-        text-indent: -9999px !important;
-    }
-
-    span:contains("__________________________________________________________________________________________"):before {
-        content: '' !important;
-        display: block !important;
-        width: 100% !important;
-        height: 1px !important;
-        background-color: #FFFFFF !important;
-    }
-
-    /* Center all content in bio section */
-    table[cellpadding="50"] {
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    table[cellpadding="50"] td {
-        text-align: center !important;
-        padding: 20px !important;
-    }
-
-    /* Fix text alignment issues */
-    p {
-        text-align: center !important;
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-    }
-
-    /* Remove all fixed widths and decorative elements */
-    .left_border,
-    .right_border,
-    .top_border,
-    .bottom_border {
-        display: none !important;
-    }
-
-    /* Force viewport constraints */
+    /* Prevent horizontal scrolling */
     body,
-    html,
-    #wrapper,
-    #cn_wrapper {
-        width: 100vw !important;
-        max-width: 100vw !important;
+    html {
         overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Force all images to be responsive */
-    img {
-        width: auto !important;
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        margin: 0 auto !important;
-    }
-
-    /* Remove all background images that might cause width issues */
-    * {
-        background-image: none !important;
-        background-size: contain !important;
     }
 }
 </style>
